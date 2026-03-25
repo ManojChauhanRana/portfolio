@@ -62,7 +62,16 @@ export const experience = [
   }
 ];
 
-export const projects = [
+export interface Project {
+  title: string;
+  tech: string[];
+  description: string;
+  featured: boolean;
+  status?: string;
+  url?: string;
+}
+
+export const projects: Project[] = [
   {
     title: "ScalarTax: Enterprise SaaS Re-engineering",
     tech: ["React 18", "TypeScript", "Ruby on Rails 7.1", "MySQL", "AWS Cognito", "EKS"],

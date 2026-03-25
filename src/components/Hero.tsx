@@ -58,24 +58,24 @@ export function Hero() {
             <ArrowRight className="inline-block ml-2 group-hover:translate-x-1 transition-transform" size={18} />
           </a>
           
-          <div className="flex items-center gap-4 w-full sm:w-auto mt-2 sm:mt-0">
+          <div className="flex items-center gap-3 w-full sm:w-auto mt-4 sm:mt-0">
             <a 
               href={personalInfo.github} 
               target="_blank" 
               rel="noopener noreferrer"
-              className="btn-secondary h-[56px] px-6 flex items-center justify-center shadow-lg hover:shadow-sky-500/10 border-slate-700/50"
+              className="group flex items-center justify-center w-[64px] h-[64px] rounded-2xl bg-slate-900/50 border border-slate-800/50 hover:border-sky-500/50 hover:bg-sky-500/5 transition-all duration-500 shadow-xl"
               aria-label="GitHub"
             >
-              <Github size={24} className="text-slate-300 group-hover:text-white transition-colors" />
+              <Github size={26} className="text-slate-400 group-hover:text-white transition-colors" />
             </a>
             <a 
               href={personalInfo.linkedin} 
               target="_blank" 
               rel="noopener noreferrer"
-              className="btn-secondary h-[56px] px-6 flex items-center justify-center shadow-lg hover:shadow-sky-500/10 border-slate-700/50"
+              className="group flex items-center justify-center w-[64px] h-[64px] rounded-2xl bg-slate-900/50 border border-slate-800/50 hover:border-sky-500/50 hover:bg-sky-500/5 transition-all duration-500 shadow-xl"
               aria-label="LinkedIn"
             >
-              <Linkedin size={24} className="text-slate-300 group-hover:text-white transition-colors" />
+              <Linkedin size={26} className="text-slate-400 group-hover:text-white transition-colors" />
             </a>
           </div>
         </motion.div>
@@ -83,12 +83,17 @@ export function Hero() {
       
       {/* Scroll Indicator */}
       <motion.div 
-        animate={{ y: [0, 10, 0] }}
-        transition={{ repeat: Infinity, duration: 2 }}
-        className="absolute bottom-12 left-1/2 -translate-x-1/2 hidden md:block"
+        animate={{ y: [0, 8, 0] }}
+        transition={{ repeat: Infinity, duration: 2.5, ease: "easeInOut" }}
+        className="absolute bottom-6 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2 opacity-30"
       >
-        <div className="w-5 h-8 rounded-full border border-slate-700 flex flex-col items-center justify-start p-1 bg-slate-800/20 backdrop-blur-sm">
-          <div className="w-0.5 h-1.5 bg-slate-500 rounded-full" />
+        <span className="text-[10px] uppercase tracking-[0.3em] font-bold text-slate-500 rotate-90 origin-left translate-x-3 translate-y-10">Scroll</span>
+        <div className="w-5 h-9 rounded-full border border-slate-700/50 flex flex-col items-center justify-start p-1 bg-slate-800/10 backdrop-blur-sm mt-8">
+          <motion.div 
+            animate={{ y: [0, 12, 0] }}
+            transition={{ repeat: Infinity, duration: 1.5 }}
+            className="w-1 h-2 bg-sky-500/50 rounded-full" 
+          />
         </div>
       </motion.div>
     </section>

@@ -13,20 +13,37 @@ export function About() {
           viewport={{ once: true }}
           className="relative max-w-lg"
         >
-          <div className="absolute -inset-4 bg-gradient-to-r from-sky-500/10 to-slate-400/10 blur-xl -z-10 rounded-3xl opacity-50" />
-          <div className="glass-card aspect-[4/5] w-full max-w-[400px] mx-auto md:ml-0 overflow-hidden relative group p-2 shadow-2xl">
-            <div className="absolute inset-0 bg-gradient-to-br from-sky-500/15 via-transparent to-slate-400/10 group-hover:opacity-60 transition-opacity" />
-            <div className="relative w-full h-full rounded-2xl overflow-hidden flex flex-col items-center justify-end bg-slate-900 border border-slate-700/50 shadow-2xl">
-              <img 
-                src={personalInfo.profileImage} 
-                alt={personalInfo.name}
-                className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
-              />
-              <div className="absolute inset-x-0 bottom-0 p-8 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent">
-                <p className="text-sky-400 font-mono text-[10px] uppercase tracking-[0.4em] font-bold mb-1">Scale & Security</p>
-                <h3 className="text-2xl font-black text-white">{personalInfo.name}</h3>
+          <div className="relative">
+            {/* Seamless Shadow/Depth - No Glows */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] bg-black/40 blur-[100px] -z-10" />
+            
+            <motion.div 
+              animate={{ y: [0, -12, 0] }}
+              transition={{ repeat: Infinity, duration: 8, ease: "easeInOut" }}
+              className="relative aspect-[4/5] w-full max-w-[360px] mx-auto md:ml-0 overflow-hidden rounded-[4rem]"
+              style={{
+                maskImage: 'radial-gradient(circle at center, black 60%, transparent 100%)',
+                WebkitMaskImage: 'radial-gradient(circle at center, black 60%, transparent 100%)',
+              }}
+            >
+              {/* Image with theme-blending overlays */}
+              <div className="relative w-full h-full group">
+                <img 
+                  src={personalInfo.profileImage} 
+                  alt={personalInfo.name}
+                  className="w-full h-full object-cover object-center scale-105 group-hover:scale-115 transition-transform duration-1000 ease-out"
+                />
+                
+                {/* Theme Blending Overlays */}
+                <div className="absolute inset-0 bg-slate-950/20 mix-blend-multiply transition-opacity group-hover:opacity-0 pointer-events-none" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-80" />
+                
+                {/* Minimalist Name Only Overlay */}
+                <div className="absolute inset-x-0 bottom-0 p-12 text-center">
+                  <h3 className="text-3xl font-black text-white leading-none tracking-tight">{personalInfo.name}</h3>
+                </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </motion.div>
 
