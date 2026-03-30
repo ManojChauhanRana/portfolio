@@ -55,7 +55,7 @@ export function Projects() {
                   >
                     <Code size={32} />
                   </motion.div>
-                  <h4 className="text-xl font-bold line-clamp-1 relative z-10 text-white group-hover:text-sky-400 transition-colors capitalize">{project.title}</h4>
+                  <h4 className="text-xl font-bold line-clamp-none whitespace-normal leading-tight relative z-10 text-white group-hover:text-sky-400 transition-colors capitalize">{project.title}</h4>
                 </div>
               </div>
               

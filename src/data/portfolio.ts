@@ -38,7 +38,7 @@ export const skills = [
   {
     category: "SaaS & Cloud",
     icon: Cloud,
-    items: ["AWS EKS", "CDK (IaC)", "Docker", "Kubernetes", "CI/CD Automation", "Cognito"]
+    items: ["AWS EKS", "CDK (IaC)", "CodeBuild", "CodeDeploy", "ECR", "CloudFront", "Docker", "Kubernetes", "Cognito"]
   },
   {
     category: "Data & Systems",
@@ -53,11 +53,12 @@ export const experience = [
     company: "Brazen Group",
     period: "Oct 2023 – Present",
     highlights: [
+      "Architected and developed high-performance RESTful APIs using Ruby on Rails, seamlessly integrated with React front-ends",
+      "Designed and implemented complex relational database schemas for multiple enterprise entities to ensure high-transaction scalability",
       "Led full-stack architecture of multi-tenant SaaS platforms using React and Ruby on Rails",
+      "Automated CI/CD workflows using AWS CodeBuild and CodeDeploy, and containerized services with Docker and Kubernetes",
       "Managed development life-cycle for complex migrations from legacy stacks with zero downtime",
-      "Built and optimized AWS microservices using CDK, significantly reducing deployment overhead",
-      "Mentored engineering teams across sprint planning, technical design, and code quality",
-      "Implemented scalable database schemas supporting high-transaction SaaS environments"
+      "Mentored engineering teams across sprint planning, technical design, and code quality"
     ]
   }
 ];
@@ -85,20 +86,22 @@ export const projects: Project[] = [
     title: "ScalarTax: Enterprise Compliance Ecosystem",
     tech: ["Ruby on Rails API", "React 18", "Kubernetes", "Docker", "Tax Rule Engine"],
     status: "Enterprise Platform",
-    description: "Architected and built the full-scale ScalarTax compliance suite on the ScalarHub core. Designed and implemented a central, multi-tenant Tax Rule Engine in Ruby to handle complex cross-jurisdictional calculations for all tenants. Developed specialized Rails APIs and React UIs for both Shared Services (User, Project modules) and Tenant-Specific micro-applications, all orchestrated through a modernized Kubernetes and Docker architecture.",
+    description: "Prepared the overall architecture and built the full-scale ScalarTax compliance suite on the ScalarHub core. Designed complex database schemas for multiple entities and implemented a central, multi-tenant Tax Rule Engine in Ruby. Developed specialized Rails APIs and React UIs for both Shared Services and Tenant-Specific applications, optimized through a modernized Kubernetes and Docker architecture.",
     featured: true
   },
   {
-    title: "Mahakumbh 2025 Certificate Application",
-    tech: ["React", "Ruby on Rails", "PostgreSQL", "AWS S3", "QR Codes"],
-    description: "High-volume certificate registration system for Mahakumbh 2025. Features multi-step forms, automated generation, and secure verification.",
+    title: "Mahakumbh 2025: AI-Driven Verification",
+    tech: ["Ruby on Rails", "React", "Face Match & EXIF AI", "Document AI", "AWS S3"],
+    status: "Production Ready",
+    description: "Developed a high-volume certificate registration and automated verification system for Mahakumbh 2025. Integrated an AI-powered photo verification engine that matches user selfies against official IDs and extracts GPS/Timestamp metadata (EXIF) to validate on-site presence. Leveraged automated document parsing for secure data extraction from travel tickets and hotel proofs, ensuring a seamless, anti-fraud registration experience for millions of pilgrims.",
     featured: true
   },
   {
-    title: "Island Innovator Platform",
-    tech: ["Odoo", "Python", "React", "PostgreSQL"],
-    description: "Custom membership management platform with reward tracking and gamification logic.",
-    featured: false
+    title: "Island Innovators: Global Membership & Reward Ecosystem",
+    tech: ["Odoo", "Python", "React", "PostgreSQL", "Custom APIs"],
+    status: "Enterprise Portal",
+    description: "Architected a custom global membership and partner reward platform by extending the Odoo ERP ecosystem with bespoke Python modules and a high-performance React portal. Developed complex multi-tenant membership logic, automated partnership benefit tracking, and secure API integrations to bridge ERP data with a modern user experience for sustainable innovation projects.",
+    featured: true
   }
 ];
 
