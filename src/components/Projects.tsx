@@ -91,22 +91,40 @@ export function Projects() {
                   Visit Solution
                   <ExternalLink size={14} className="group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
                 </a>
+              ) : project.sourceUrl ? (
+                <div className="flex items-center gap-3">
+                  <div className="btn-secondary py-2 px-6 text-xs opacity-50 cursor-not-allowed">
+                    Private Project
+                  </div>
+                  <a 
+                    href={project.sourceUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-slate-500 hover:text-sky-400 transition-colors"
+                  >
+                    <Github size={14} />
+                    Reference Architecture
+                    <ArrowRight size={10} />
+                  </a>
+                </div>
               ) : (
                 <div className="btn-secondary py-2 px-6 text-xs opacity-40 cursor-not-allowed">
                   Private Project
                 </div>
               )}
               <div className="flex-1" />
-              <div className="flex items-center gap-2 bg-slate-900 p-2 rounded-lg opacity-40 group-hover:opacity-100 transition-all duration-500 shadow-xl">
-                <a 
-                  href={personalInfo.github}
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-slate-400 hover:text-sky-400 transition-colors hover:scale-110"
-                >
-                  <Github size={18} />
-                </a>
-              </div>
+              {!project.sourceUrl && (
+                <div className="flex items-center gap-2 bg-slate-900 p-2 rounded-lg opacity-40 group-hover:opacity-100 transition-all duration-500 shadow-xl">
+                  <a 
+                    href={personalInfo.github}
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-slate-400 hover:text-sky-400 transition-colors hover:scale-110"
+                  >
+                    <Github size={18} />
+                  </a>
+                </div>
+              )}
             </div>
           </motion.div>
         ))}

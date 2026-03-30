@@ -70,12 +70,12 @@ export function About() {
           
           <div className="flex gap-12 pt-6 border-t border-slate-800/50 max-w-sm">
             <div className="space-y-1">
-              <p className="text-sky-400 text-3xl font-black tracking-tight">3+</p>
+              <p className="text-sky-400 text-3xl font-black tracking-tight">3</p>
               <p className="text-[10px] text-slate-500 uppercase tracking-widest font-bold">Years Experience</p>
             </div>
             <div className="space-y-1">
-              <p className="text-slate-300 text-3xl font-black tracking-tight">Tech Lead</p>
-              <p className="text-[10px] text-slate-500 uppercase tracking-widest font-bold">Project Leadership</p>
+              <p className="text-slate-300 text-3xl font-black tracking-tight">Full Stack</p>
+              <p className="text-[10px] text-slate-500 uppercase tracking-widest font-bold">Engineer with Lead</p>
             </div>
           </div>
         </motion.div>

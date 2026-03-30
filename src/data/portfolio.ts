@@ -21,7 +21,7 @@ export const personalInfo = {
   github: "https://github.com/ManojChauhanRana",
   linkedin: "https://www.linkedin.com/in/manoj-chauhan-64b200227/",
   profileImage: "/profile.jpg",
-  summary: "Results-driven Senior Full Stack Developer with 3+ years of experience specializing in Ruby on Rails and React. Expert in architecting scalable SaaS platforms, implementing complex integrations, and delivering high-performance web applications as a Technical Lead. Proven track record in leading development teams and transforming legacy systems into modern, cloud-native solutions."
+  summary: "Results-driven Senior Full Stack Developer with 3 years of experience specializing in Ruby on Rails and React. Expert in architecting scalable SaaS platforms, implementing complex integrations, and delivering high-performance web applications as a Technical Lead. Proven track record in leading development teams and transforming legacy systems into modern, cloud-native solutions."
 };
 
 export const skills = [
@@ -69,6 +69,7 @@ export interface Project {
   featured: boolean;
   status?: string;
   url?: string;
+  sourceUrl?: string;
 }
 
 export const projects: Project[] = [
@@ -83,7 +84,8 @@ export const projects: Project[] = [
     title: "AWS Microservices Architectural Migration",
     tech: ["AWS", "Kubernetes", "Docker", "Ruby on Rails", "React", "MySQL"],
     description: "Successfully migrated core enterprise microservices from Angular/Spring-Boot and DynamoDB to a streamlined React/Rails/MySQL architecture. Implemented high-availability CI/CD using CodeCommit and CloudFront.",
-    featured: true
+    featured: true,
+    sourceUrl: "https://github.com/aws-samples/aws-saas-factory-eks-reference-architecture"
   },
   {
     title: "Mahakumbh 2025 Certificate Application",
