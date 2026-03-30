@@ -74,18 +74,19 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    title: "ScalarTax: Enterprise SaaS Re-engineering",
-    tech: ["React 18", "TypeScript", "Ruby on Rails 7.1", "MySQL", "AWS Cognito", "EKS"],
-    status: "Production Ready",
-    description: "Architected the total overhaul of an Enterprise AWS SaaS Reference Architecture, migrating from Angular/Microservices to a high-velocity React/Rails ecosystem. Re-built the core Tax engine, including complex nexus determination and automated exemption logic.",
-    featured: true
-  },
-  {
-    title: "AWS Microservices Architectural Migration",
-    tech: ["AWS", "Kubernetes", "Docker", "Ruby on Rails", "React", "MySQL"],
-    description: "Successfully migrated core enterprise microservices from Angular/Spring-Boot and DynamoDB to a streamlined React/Rails/MySQL architecture. Implemented high-availability CI/CD using CodeCommit and CloudFront.",
+    title: "ScalarHub: Foundations & Tech Stack Migration",
+    tech: ["Ruby on Rails API", "React", "MySQL", "AWS EKS", "CDK"],
+    status: "Architectural Migration",
+    description: "Led the massive migration of the foundational AWS SaaS Factory EKS Reference Architecture. Re-engineered the original Angular, Spring-Boot, and DynamoDB stack into a high-performance React, Ruby on Rails, and MySQL ecosystem. Optimized the infrastructure specifically for multi-tenant relational data compliance.",
     featured: true,
     sourceUrl: "https://github.com/aws-samples/aws-saas-factory-eks-reference-architecture"
+  },
+  {
+    title: "ScalarTax: Enterprise Compliance Ecosystem",
+    tech: ["Ruby on Rails API", "React 18", "Kubernetes", "Docker", "Tax Rule Engine"],
+    status: "Enterprise Platform",
+    description: "Architected and built the full-scale ScalarTax compliance suite on the ScalarHub core. Designed and implemented a central, multi-tenant Tax Rule Engine in Ruby to handle complex cross-jurisdictional calculations for all tenants. Developed specialized Rails APIs and React UIs for both Shared Services (User, Project modules) and Tenant-Specific micro-applications, all orchestrated through a modernized Kubernetes and Docker architecture.",
+    featured: true
   },
   {
     title: "Mahakumbh 2025 Certificate Application",
