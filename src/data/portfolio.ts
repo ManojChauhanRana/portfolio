@@ -34,7 +34,7 @@ export const skills = [
   {
     category: "Integrations & APIs",
     icon: Terminal,
-    items: ["MuleSoft", "RESTful APIs", "GraphQL", "Microservices", "Odoo Integrations"]
+    items: ["MuleSoft", "RESTful APIs", "Microservices", "Odoo Integrations", "Postman", "CI/CD"]
   },
   {
     category: "SaaS & Cloud",
@@ -52,7 +52,7 @@ export const experience = [
   {
     role: "Senior Full Stack Developer | Tech Lead",
     company: "Brazen Group",
-    period: "Oct 2023 – Present",
+    period: "Jul 2023 – Present",
     highlights: [
       "Architected and developed high-performance RESTful APIs using Ruby on Rails, seamlessly integrated with React front-ends",
       "Designed and implemented complex relational database schemas for multiple enterprise entities to ensure high-transaction scalability",
